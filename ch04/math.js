@@ -1,0 +1,28 @@
+const a = 10;
+const b = 3;
+
+console.log(a + b); // 더하기, 13
+console.log(a - b); // 빼기, 7 
+console.log(a * b); // 곱하기, 30
+console.log(a / b); // 나누기, 3.333...
+console.log(a % b);  // 나머지, 1
+console.log(a ** b); // 거듭제곱, 1000
+
+console.log(" 문자열 " + 1); // 문자열 1
+console.log(+"1024"); // 1024
+console.log(+true); // 1
+console.log(+false); // 0
+
+//"10" == 10
+//"10" === 10
+
+// +를 제외한 산술 연산자는,
+// 피연산자에 문자열이 있는 경우 Number로 변환 후 연산을 시도 한다.
+console.log("10" - 1); 
+console.log("10" * b); 
+console.log("10" / b); 
+console.log("10" % b); 
+console.log("10" ** b); 
+
+console.log('문자열' + 1);
+
