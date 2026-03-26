@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>홀수/짝수</title>
+    </head>
+    <body>
+        <input id="input_number" type="number" />
+        <button id="bin" type="button">확인</button>
+        <div id="print"></div>
+    </body>
+</html>
+<script>
+    //1.버튼 요소 가져온 후 클릭 이밴트 등록
+    document.getElementById("bin").onclick = function () {
+        let num = document.getElementById("input_number").value;
+        //num 짝수인지 홀수인지 판별
+       
+        let result = null;
+        if (num % 2 == 0){
+            //짝수
+            result = "짝수"; // 세미콜론은 이런데에 (print) + (result) (console.log)에 붙이는거임
+        }else{
+            //홀수
+            result = "홀수";
+        }
+        document.getElementById("print").textContent = result;
+    };
+</script>
