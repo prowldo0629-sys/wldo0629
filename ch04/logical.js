@@ -23,6 +23,9 @@ const age = 19;
 const result = age >= 8 && age <= 19 ? "학생이다": "학생이아니다";
 console.log(result);
 
+//Nullish 병합 연산자
+// 좌항이 null 또는 undefined인 경우
+// 우황의 값을 반환하고, 그렇지 않은 경우 좌황을 반황한다
 let nickname = null;
 console.log(nickname ?? "익명사용자");
 nickname = undefined;

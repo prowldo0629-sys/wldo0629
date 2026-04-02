@@ -1,0 +1,81 @@
+function solution(start_num, end_num) {
+    const answer = [];
+    for (let i = start_num; i <= end_num; i++) {
+        answer.push(i);
+    }               // 돌아가서 answer의 값은 반환하겠다
+                   // 그래서 console.log()이거 안 적어도됨
+    return answer;
+}
+
+// 정수 num과 n이 매개 변수로 주어질 때,  num이 n의 배수이면 1을
+// return n의 배수가 아니라면 0을 return하도록 solution 함수를 완성해주세요.
+
+function solution(num, n) {
+    var result = 0; 
+    if (num % n == 0){
+        result = 1
+    }
+
+    return result;
+}
+console.log(solution(98, 2))
+
+
+function solution(number, n, m) {
+    var result = 0;
+
+    if (number % n == 0 && number % m == 0) {
+        result = 1;
+    }
+
+    return result;
+}
+
+console.log(solution(60, 3, 5)); 
+
+
+function solution(num_list) {
+    var answer = 0;
+    
+    let sum = 1
+    let 
+
+    
+    return answer;
+}
+
+function solution(num_list) {
+    let sum = 0;
+    let mul = 1;
+
+    for (let i = 0; i < num_list.length; i++) {
+        
+    }
+
+    if (mul < sum * sum) {
+        return 1;
+    } else {
+        return 0;
+    }
+}
+
+
+function solution(num_list) {
+    var answer = 0;
+    
+    var gobhagi = 1;
+    var plus = 0;
+    
+    for (var i = 0; i < num_list.length; i++) {
+        gobhagi *= num_list[i]; // gobhagi = gobhagi 
+        plus += num_list[i]; // plus = puls + num_list[i];
+    }
+
+    var zegob = plus ** 2;
+    
+    if (gobhagi < zegob) {
+        answer = 1;
+    }
+    
+    return answer;
+}
