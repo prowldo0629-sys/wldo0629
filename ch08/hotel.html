@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>💕💩호텔 체크인 관리💩💕</title>
+        <style>
+            @font-face {
+                font-family: 'ElegantSerif';
+                src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2604-1@1.0/GraceSerif-Regular.woff2') format('woff2');
+                font-weight: 500;
+                font-display: swap;
+            }
+
+            @font-face {
+                font-family: 'ElegantSerif';
+                src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2604-1@1.0/GraceSerif-Bold.woff2') format('woff2');
+                font-weight: 700;
+                font-display: swap;
+            }
+
+            @font-face {
+                font-family: 'IAmAPlayer';
+                src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/IAMAPLAYER.woff2') format('woff2');
+                font-weight: normal;
+                font-display: swap;
+}
+
+            input {
+                /* 너비 70% */
+                width: 70%;
+                /* 테두리 안쪽 여백 12xp */
+                padding: 12px;
+                /* 테두리 없음 */
+                border: none;
+                /* 모서리 곡을 10px */
+                border-radius: 10px;
+                /* outline 없음 */
+                outline: none;
+                /* 폰트 크기 16px */
+                font-size: 16px;
+            }
+
+            button {
+                /* 테두리 왼쪽 여백 상하 12px, 좌우 10px */
+                padding: 12px 10px;
+                /* 테두리 없음 */
+                border: none;
+                /* 모서리 곡을 10px */
+                border-radius: 10px;
+                /* 배경색 burkyodd */
+                background-color: blueviolet;
+                /* 텍스트 색상 변경 */
+                color: lightcoral;
+                /* cursor 모양 pointer*/
+                cursor: pointer;
+                /* 폰트 두껍게 */
+                font-weight: bold;
+
+            }
+
+            button:hover {
+                /* 배경색 rgb(255, 214, 164) */
+                background-color: aquamarine;
+            }
+
+            ul {
+                /* 테두리 안쪽 여백 12xp */
+                padding-left: 20px;
+            }
+
+            li {
+                /* 테두리 안쪽 여백 12xp */
+                margin: 10px 0;
+                /* 테두리 안쪽 여백 12xp */
+                padding: 10px;
+                /* 테두리 안쪽 여백 12xp */
+                background-color: darkkhaki;
+                /* 테두리 안쪽 여백 12xp */
+                border-radius: 5px;
+            }
+            #room_cnt {
+                /* 폰트 크기 30px */
+                font-size: 30px;
+                /* 폰트색상 */
+                color: orange;
+                font-weight: 700;
+            }
+            body {
+                background-color: rgb(171, 31, 94);
+                font-family: "ElegantSerif", "IAmAPlayer";
+            }
+
+            h1 {
+                color: rgb(134, 36, 36);
+            }
+
+            h2 {
+                color: rgb(255, 255, 255);
+            }
+
+            h3{
+                color: rgb(255, 255, 255);
+            }
+
+            h4 {
+                color: rgb(255, 255, 255);
+            }
+
+            p {
+                font-size: 100px;
+            }
+
+            .wrap {
+            
+                background-color: rgba(59, 59, 59, 0.9);
+                border-radius: 100px;
+                padding: 20px;
+                margin: 20px auto 0;
+                width: 50%;
+            }
+
+            img {
+                width:100% ;
+                border-radius: 10px;
+            }
+
+            .checkin_wrap {
+                background-color: rgb(113, 113, 113);
+                padding: 15px;
+                margin: 15px 0;
+                border-radius: 30px;
+            }
+
+            .checkin_wrap h3,
+            .room_wrap h5 {
+                margin-top: 5px;
+            }
+
+            .room_wrap {
+                background-color: aqua;
+                padding: 15px;
+                margin: 15px 0;
+                border-radius: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrap"> 
+            <h1>경소고 호텔 체크인 관리</h1>
+            <!--0. 호텔 소개-->
+            <p>호텔 체크인/ 체크아웃을 관리하는 웹 페이지입니다!~~!~!</p>
+            <!--상대경로
+            ./ -> 현재 파일이 있는 폴더
+            ../-> 현재 파일이 있는 폴더의 상위 폴더의 상대 경로
+            / -> 현재프로젝트 / 도메인의 최상위 폴더 
+            -->
+
+            <img src="./hotel.jpeg"/>
+            <div class="checkin_wrap">
+                <h2> 체크인 목록</h2>
+                <!--1. 이미 체크인된 사람 명단-->
+                <ul id="checkin_list">
+                <li>은햑</li>
+                <li>동혁</li>
+                <li>금혁</li>
+                </ul>
+            </div>
+            <div class="checkin_wrap">
+
+                <h3>체크인</h3>
+                <!--3. 체크인/ 체크아웃-->
+                <input
+                    id="input_name"
+                    type="text"
+                    placeholder="너의 이름을 입력하거라"
+                    />
+
+                    <button id="btn_checkin">체크인</button>
+            </div>
+            <div class="checkin_wrap">
+                <h4>체크아웃</h4>
+                <input
+                    id="input_num"
+                    type="number"
+                    placeholder="너의 순번을 입력하거라"
+                    />
+
+                    <button id="btn_checkout">체크아웃</button>
+            </div>
+            <!--3. 빈 장 개수 -->
+            <!-- <div class="room_wrap">
+                <h5>빈 방 개수</h5>
+                <p id="room_cnt">200개</p>
+            </div> -->
+        </div>
+    </body>
+    <script>
+      const checkin_list = document.getElementById("checkin_list");
+      let customerCount = checkin_list.children.length;
+
+      // 체크인
+      // customers 배열에 손님 추기
+
+      function checkin(name) {
+        if (name.trim().length == 0) {
+            alert("이름을 입력하거라 ");
+            return false;
+        }
+        customerCount++;
+        return true;
+      }
+
+      document.getElementById("btn_checkin").onclick = function () {
+        const name = document.getElementById("input_name").value;
+        if (checkin(name)) {
+            const li = document.createElement("li"); 
+            li.textContent = name; 
+            checkin_list.appendChild(li);   
+            document.getElementById("input_name").value = "";
+        }
+      };
+
+      document.getElementById("btn_checkout").onclick = function () {
+        const num = document.getElementById("input_num").value;
+
+        if (num <= customerCount && num >= 1) {
+            customerCount--;
+            checkin_list.children[num - 1].remove();
+        } else {
+                alert(`1부터 ${customerCount} 사이의 값을 입룍하세오`);
+            }
+        };
+    </script>
+</html>
